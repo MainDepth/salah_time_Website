@@ -6,7 +6,9 @@ import datetime
 def diary_entry(entry):
     date = datetime.date.today()
     date = date.strftime("%d/%m/%Y")
-    return date , entry
+    time = f"{datetime.datetime.now().hour}:{datetime.datetime.now().minute}:{datetime.datetime.now().second}"
+
+    return date ,time, entry
 
 
 entry = input("entry")
@@ -14,4 +16,6 @@ a = diary_entry(entry)
 
 filepath= "diary.txt"
 with open(filepath, 'a') as diary:
-    diary.write("\n"+a[0]+"\n"+a[1]+"\n")
+    diary.write("\n"+a[0]+ " " + a[1]+"\n"+a[2])
+
+
