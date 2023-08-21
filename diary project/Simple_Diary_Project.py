@@ -2,6 +2,7 @@
 # user should be able to create and remove diaries
 
 import datetime
+import keyboard
 
 def diary_entry(entry):
     date = datetime.date.today()
@@ -14,8 +15,12 @@ def diary_entry(entry):
 entry = input("entry")
 a = diary_entry(entry)
 
+
+
+
 filepath= "diary.txt"
-with open(filepath, 'a') as diary:
-    diary.write("\n"+a[0]+ " " + a[1]+"\n"+a[2])
+if keyboard.is_pressed('esc'):
+    with open(filepath, 'a') as diary:
+        diary.write("\n"+a[0]+ " " + a[1]+"\n"+a[2])
 
 
