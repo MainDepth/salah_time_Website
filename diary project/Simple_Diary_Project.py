@@ -4,23 +4,23 @@
 import datetime
 import keyboard
 
-def diary_entry(entry):
+def diary_entry():
     date = datetime.date.today()
     date = date.strftime("%d/%m/%Y")
     time = f"{datetime.datetime.now().hour}:{datetime.datetime.now().minute}:{datetime.datetime.now().second}"
 
-    return date ,time, entry
+    return date ,time
 
 
-entry = input("entry")
-a = diary_entry(entry)
+lines = []
+while True:
+    line = input()
+    if line == "":
+        break
+    lines.append(line)
 
-
-
-
-filepath= "diary.txt"
-if keyboard.is_pressed('esc'):
-    with open(filepath, 'a') as diary:
-        diary.write("\n"+a[0]+ " " + a[1]+"\n"+a[2])
-
-
+with open("diary.txt", "a") as diary:
+    diary.write(diary_entry()[0]+" "+diary_entry()[1]+"\n")
+    for line in lines:
+        diary.write(line + "\n")
+    diary.write("\n")
