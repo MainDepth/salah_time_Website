@@ -24,3 +24,5 @@ with open("diary.txt", "a") as diary:
     for line in lines:
         diary.write(line + "\n")
     diary.write("\n")
+
+  
