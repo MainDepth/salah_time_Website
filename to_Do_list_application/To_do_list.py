@@ -4,6 +4,7 @@ import To_do_list_class
 
 def main():
     my_list = To_do_list_class.ToDoList()
+    filepath=r"to_Do_list_application\to_do_list.txt"
 
     while True:     
         print("================================")
@@ -32,8 +33,10 @@ def main():
             my_list.mark_task_as_completed(TaskID)
 
         elif a == "4":
-            filepath=r"to_Do_list_application\to_do_list.txt"
             my_list.save_list(filepath)
+
+        elif a == "5":
+            my_list.load_list(filepath)
 
         else:
             print("option not available")

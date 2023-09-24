@@ -1,1 +1,2 @@
-1,Task name: sd, task description: sa,task duration: 2, task completed: no, 
+Task name: write email, task description: write email to dell asking them about my case,task duration: 10 minutes, task completed: no 
+Task name: exercise, task description: perform 100 knee push ups and 100 wall pull ups,task duration: 1 hour, task completed: no 

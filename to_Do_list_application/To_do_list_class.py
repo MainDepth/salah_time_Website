@@ -45,8 +45,20 @@ class ToDoList:
             if not self.tasks:
                 print("to do list empty")
             else:
-                for index, task in enumerate(self.tasks, start=1):
-                    todo_list.write(f"{index},{task} \n")
+                for task in self.tasks:
+                    todo_list.write(f"{task} \n")
+    
+    def load_list(self, filepath):
+        todoList=[]
+        with open(filepath, "r") as todo_list_reader:
+            for line in todo_list_reader:
+                todoList.append(line)
+        
+        if not todoList:
+            print("list empty")
+        else:
+            for i, task in enumerate(todoList, start=1):
+                print(f"{i}, {task}")
 
 
 
