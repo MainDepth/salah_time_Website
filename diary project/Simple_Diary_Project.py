@@ -2,7 +2,6 @@
 # user should be able to create and remove diaries
 
 import datetime
-import keyboard
 
 def diary_entry():
     date = datetime.date.today()
