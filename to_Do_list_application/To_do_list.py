@@ -31,6 +31,10 @@ def main():
             TaskID= int(input("enter the task number to mark as completed: "))
             my_list.mark_task_as_completed(TaskID)
 
+        elif a == "4":
+            filepath=r"to_Do_list_application\to_do_list.txt"
+            my_list.save_list(filepath)
+
         else:
             print("option not available")
 

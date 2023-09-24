@@ -39,4 +39,14 @@ class ToDoList:
 
         else:
             print("invalid task id")
+    
+    def save_list(self, filepath):
+        with open(filepath, "a") as todo_list:
+            if not self.tasks:
+                print("to do list empty")
+            else:
+                for index, task in enumerate(self.tasks, start=1):
+                    todo_list.write(f"{index},{task} \n")
+
+
 
