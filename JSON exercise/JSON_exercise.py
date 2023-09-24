@@ -18,4 +18,3 @@ G["highest education level"] = "banchelor's degree"
 with open(filepath, "w") as json_file:
      json.dump(G,json_file,indent=4)
 
-
