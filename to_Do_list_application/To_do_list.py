@@ -1,5 +1,6 @@
 import To_do_list_class 
 
+# add a feature that stores the list of tasks into .txt file
 
 def main():
     my_list = To_do_list_class.ToDoList()
@@ -9,6 +10,8 @@ def main():
         print("1: view tasks ")
         print("2: add task ")
         print("3: mark task as completed ")
+        print("4: save tasks")
+        print("5: load tasks")
         print("================================")
 
         a =input("Select an option ")
