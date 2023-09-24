@@ -1,0 +1,12 @@
+{
+    "name": "Amin abdul Awal",
+    "age": 22,
+    "Married": false,
+    "Job status": "looking for work",
+    "hobbies": [
+        "reading",
+        "running",
+        "jiu jitsu"
+    ],
+    "highest education level": "banchelor's degree"
+}
